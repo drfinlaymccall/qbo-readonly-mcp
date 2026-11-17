@@ -1,6 +1,10 @@
 # QuickBooks Online for Claude and Codex
 
-Read company details, financial reports and accounting records through a private Intuit app. This connector is part of the Business Operating System series.
+I published this connector in the Business Operating System series after we tried to connect Claude to an Australian QuickBooks Online company and Intuit's official connector would not connect. We wanted to ask Claude for a profit and loss report directly from the books.
+
+Other Australian users reported the same problem at authorisation. On 13 October 2026, a QuickBooks community manager confirmed that Intuit offered its Claude connector only to US customers. Intuit said it was working on international availability and gave no Australian release date. [QuickBooks Community response](https://quickbooks.intuit.com/community/other-questions-9/australia-claude-anthropic-quickbooks-connector-blocked-app-isn-t-available-for-use-in-your-country-please-give-au-date-376577)
+
+This connector takes a separate route. You authorise your own Intuit app. A small server on your computer then lets Claude or Codex read reports and records through the QuickBooks Online Accounting API. Claude Code connected in testing. A live read from an Australian company still needs verification.
 
 The server exposes four MCP tools. Company data requests use HTTP GET. The query tool accepts a single SELECT statement. OAuth renewal sends a POST to Intuit. The accounting token has broader permissions than these tools. Report export writes a CSV to the local computer. Tool results enter the selected assistant's context.
 
