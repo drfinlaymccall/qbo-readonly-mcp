@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "qbo-readonly": {
+      "command": "/usr/bin/python3",
+      "args": [
+        "/Users/<your-username>/Library/Application Support/qbo-readonly/qbo_mcp.py"
+      ]
+    }
+  }
+}
